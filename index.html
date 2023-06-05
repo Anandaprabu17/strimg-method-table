@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Method</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <style>
+        table,th,td{
+            border:2px solid #000000;
+            border-collapse: collapse;
+        }
+        table{
+            margin:auto;
+            text-align: center;
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption style="font-weight: 900;font-size: large;">JS String Method</caption>
+        <tr>
+            <th>Method</th>
+            <th>Operation</th>
+            <th>Example</th>
+            <th>Output</th>
+        </tr>
+        <tr>
+            <th>Length</th>
+            <td>The length of the string</td>
+            <td>var a="anandaprabu";<br>
+                var b=a.length;<br>
+                document.write(b);</td>
+                <td>11</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Slice()</th>
+            <td rowspan="2">The method extracts a part of a string.</td>
+            <td>var a="anandaprabu";<br>
+                var b=a.slice(6);<br>
+                document.write(b);</td>
+                <td>prabu</td>
+        </tr>
+        <tr>
+            <td>
+                var a="anandaprabu";<br>
+                var b=a.slice(-11,-6);<br>
+                document.write(b);</td>
+                <td>anand</td>
+        </tr>
+         <tr>
+            <th>Substring()</th>
+            <td>The method extracts characters, between two indices (positions), from a string, and returns the substring.</td>
+            <td>var a="dog, cat,rat ";<br>
+                var b=a.substring(4,8);<br>
+                document.write(b);</td>
+                <td>cat</td>
+         </tr>
+         <tr>
+            <th>Substr()</th>
+            <td>The method extracts a part of a string.</td>
+            <td>var a="dog,cat,rat ";<br>
+                var b=a.substr(-4,3);<br>
+                document.write(b);</td>
+                <td>rat</td>
+            </tr>
+         <tr>
+            <th rowspan="3">Replace()</th>
+            <td rowspan="3">The method searches a string for a value or a regular expression.</td>
+            <td>
+                var x="i kill you";<br>
+                var y=x.replace("kill","hate");<br>
+                console.log(y);</td>
+                <td>i hate you</td>
+         </tr>
+         <tr>
+            <td>var x="need action,need assurances";<br>
+                var y=x.replace(/need/g,"no");<br>
+                console.log(y);</td>
+                <td>no action,no assurances</td>
+         </tr>
+         <tr>
+             <td>var x="need action,need assurances";<br>
+                var y=x.replace(/Need/i,"no");<br>
+                console.log(y);</td>
+                <td>no action,need assurances</td>
+         </tr>
+         <tr>
+            <th>ReplaceAll()</th>
+            <td>The method returns a new string with all matches of a pattern replaced by a replacement.</td>
+            <td>var x="Need action,need assurances";<br>
+                var y=x.replaceAll("Need","No");<br>
+                var y=x.replaceAll("need","no");<br>
+                console.log(y);</td>
+                <td>Need action,no assurances</td>
+         </tr>
+         <tr>
+            <th>toUpperCase()</th>
+            <td>The method converts a string to uppercase letters.</td>
+            <td>var a="ananda prabu!";<br>
+                var b=a.toUpperCase();<br>
+                console.log(b);</td>
+                <td>ANANDA PRABU!</td>
+         </tr>
+         <tr>
+            <th>toLowerCase()</th>
+            <td>The method converts a string to lowercase letters.</td>
+            <td>
+                var a="ANANDA PRABU!";<br>
+                var b=a.toLowerCase();<br>
+                console.log(b);</td>
+                <td>ananda prabu!</td>
+         </tr>
+         <tr>
+            <th>concat()</th>
+            <td>The method joins two or more strings.</td>
+            <td>var a="Ananda";<br>
+                var b="Prabu!";<br>
+                var c=a.concat(" ",b);<br>
+                console.log(c);
+                </td>
+                <td>Ananda Prabu!</td>
+         </tr>
+         <tr>
+            <th>trim()</th>
+            <td>The method removes whitespace from both sides of a string.</td>
+            <td>var a="           ananda   prabu           ";<br>
+                var b=a.trim();<br>
+                console.log(b);</td>
+                <td>ananda   prabu</td>
+         </tr>
+         <tr>
+            <th>trimStart()</th>
+            <td>The method removes whitespace from the beginning of a string.</td>
+            <td>var a="   anandaprabu   ";<br>
+                var b=a.trimStart();><br>
+                console.log(b);</td>
+                <td>anandaprabu   </td>
+         </tr>
+         <tr>
+            <th>trimEnd()</th>
+            <td>The method removes whitespace from the end of a string.</td>
+            <td>var a="   anandaprabu   ";<br>
+                var b=a.trimEnd();<br>
+                console.log(b);</td>
+                <td>   anandaprabu</td>
+         </tr>
+         <tr>
+            <th>padStart()</th>
+            <td>The method pads a string from the start.The padStart() method pads a string with another string (multiple times) until it reaches a given length.</td>
+            <td>var a="6";<br>
+                var b=a.padStart(8,"7");<br>
+                console.log(b);</td>
+                <td>77777776</td>
+         </tr>
+         <tr>
+            <th>padEnd()</th>
+            <td>The method pads a string at the end.The padEnd() method pads a string with another string (multiple times) until it reaches a given length.</td>
+            <td>var numb="6";<br>
+                var b=numb.padEnd(4,"5");<br>
+                console.log(b);</td>
+                <td>6555</td>
+        </tr>
+        <tr>
+           <th>CharAt()</th> 
+           <td>The method returns the character at a specified index (position) in a string.</td>
+           <td>var a="My computer";<br>
+            var b=a.charAt(2);<br>
+            var c=a.charAt(0);<br>
+            var d=a.charAt(10);<br>
+            console.log(b);<br>
+            console.log(c);<br>
+            console.log(d);</td>
+            <td>
+               <br>  
+               M<br>
+               r<br>
+            </td>
+        </tr>
+        <tr>
+            <th>charCodeAt()</th>
+            <td>The method returns the Unicode of the character at a specified index (position) in a string.</td>
+            <td>
+                var a="My computer";<br>
+                var b=a.charCodeAt(2);<br>
+                var c=a.charCodeAt(0);<br>
+                var d=a.charCodeAt(10);<br>
+                console.log(b);<br>
+                console.log(c);<br>
+                console.log(d);<br>
+            </td>
+            <td>32<br>77<br>114</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Split()</th>
+            <td rowspan="2">The method splits a string into an array of substrings.</td>
+            <td>var a="A,B,C,D,E";<br>
+                var b=a.split();<br>
+                console.log(b)</td>
+                <td>['A,B,C,D,E']</td>
+        </tr>
+        <tr>
+            <td>var a="98765,4321";<br>
+                var b=a.split(",");<br>
+                console.log(b);</td>
+                <td>['98765', '4321']</td>
+        </tr>
+    </table>
+</body>
+</html>
